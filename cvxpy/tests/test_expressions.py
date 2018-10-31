@@ -625,7 +625,7 @@ class TestExpressions(BaseTest):
         with self.assertRaises(Exception) as cm:
             (self.x/[2, 2, 3])
         print(cm.exception)
-        self.assertRegex(str(cm.exception),
+        self.assertRegexpMatches(str(cm.exception),
                          "Can only divide by a scalar constant.*")
 
         # Constant expressions.
